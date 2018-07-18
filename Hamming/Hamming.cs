@@ -10,10 +10,11 @@ namespace Hamming
             int hammingDistance = 0;
             if(current == null)
                 throw new ArgumentNullException("current");
-            if(original == null)
+            else if(original == null)
                 throw new ArgumentNullException("original");
-            if (original.Length != current.Length)
+            else if (original.Length != current.Length)
                 throw new ArgumentException("Hamming Distance can only be calculated over strings of equal length");
+            else
             for (int i = 0, length = original.Length; i < length; i++)
             {
                 if (original[i] != current[i])
